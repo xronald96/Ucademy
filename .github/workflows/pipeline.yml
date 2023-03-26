@@ -63,7 +63,7 @@ jobs:
       - name: Build
         run : npm run build
   deploy:
-    needs: ['lint', 'build', 'tests']
+    needs: ['build', 'tests']
     runs-on: ubuntu-20.04
     steps:
       - name: Deploy heroku
